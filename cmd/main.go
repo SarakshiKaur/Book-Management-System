@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/SarakshiKaur/Book-Management-System/pkg/config"
 	"github.com/SarakshiKaur/Book-Management-System/pkg/routes"
 	"github.com/gorilla/mux"
 )
@@ -11,6 +12,7 @@ import (
 func main() {
 	// Initialize mux
 	r := mux.NewRouter()
+	config.GetDB()
 
 	// registering routes here from routes folder
 	routes.RegisterRoutes(r)
